@@ -259,7 +259,7 @@ export default function Desktop() {
           <span className="hidden sm:inline">Go</span>
         </div>
         <div className="flex items-center gap-4">
-          <span>Chris Medina</span>
+          <span>Do Not Disturb</span>
           <span>{clock}</span>
         </div>
       </div>
