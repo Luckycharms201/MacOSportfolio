@@ -284,18 +284,18 @@ export default function Desktop() {
           style={{
             objectPosition: "center 25%",
             WebkitMaskImage:
-              "radial-gradient(ellipse at center, transparent 32%, black 72%)",
+              "radial-gradient(ellipse at center, transparent 25%, black 68%)",
             maskImage:
-              "radial-gradient(ellipse at center, transparent 32%, black 72%)",
+              "radial-gradient(ellipse at center, transparent 25%, black 68%)",
           }}
-          className="absolute inset-0 h-full w-full scale-105 object-cover blur-lg"
+          className="absolute inset-0 h-full w-full scale-105 object-cover blur-2xl"
         />
         {/* Vignette */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse at center, transparent 45%, rgba(0,0,0,0.28) 78%, rgba(0,0,0,0.5) 100%)",
+              "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.42) 76%, rgba(0,0,0,0.72) 100%)",
           }}
         />
       </div>
