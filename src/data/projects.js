@@ -122,6 +122,6 @@ export const dockApps = [
   { label: "Tr", grad: "linear-gradient(145deg,#cfd4dc,#9aa1ad)", projectId: null },
 ];
 
-// --- faded background portrait ------------------------------------------------
+// --- faded desktop background -------------------------------------------------
 // Real photo in /public. Swap this path to change it.
-export const bgPortrait = "/background.jpg";
+export const bgPortrait = "/dndwebpage.png";
