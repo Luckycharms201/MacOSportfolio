@@ -264,15 +264,41 @@ export default function Desktop() {
         </div>
       </div>
 
-      {/* Full-screen background photo */}
-      <img
-        src={bgPortrait}
-        alt=""
-        aria-hidden
-        draggable={false}
-        style={{ objectPosition: "center 25%" }}
-        className="pointer-events-none absolute inset-0 z-0 h-full w-full scale-105 select-none object-cover blur-sm"
-      />
+      {/* Full-screen background: sharp center, blur toward the edges, + vignette */}
+      <div className="pointer-events-none absolute inset-0 z-0 select-none">
+        {/* Sharp base photo */}
+        <img
+          src={bgPortrait}
+          alt=""
+          aria-hidden
+          draggable={false}
+          style={{ objectPosition: "center 25%" }}
+          className="absolute inset-0 h-full w-full scale-105 object-cover"
+        />
+        {/* Blurred copy, revealed only toward the edges → radial blur */}
+        <img
+          src={bgPortrait}
+          alt=""
+          aria-hidden
+          draggable={false}
+          style={{
+            objectPosition: "center 25%",
+            WebkitMaskImage:
+              "radial-gradient(ellipse at center, transparent 32%, black 72%)",
+            maskImage:
+              "radial-gradient(ellipse at center, transparent 32%, black 72%)",
+          }}
+          className="absolute inset-0 h-full w-full scale-105 object-cover blur-lg"
+        />
+        {/* Vignette */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse at center, transparent 45%, rgba(0,0,0,0.28) 78%, rgba(0,0,0,0.5) 100%)",
+          }}
+        />
+      </div>
 
       {/* Empty-desktop hit layer (starts marquee / deselects) */}
       <div className="absolute inset-0 z-[1]" onPointerDown={startMarquee} />
