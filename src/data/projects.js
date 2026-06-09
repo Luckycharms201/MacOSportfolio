@@ -124,4 +124,4 @@ export const dockApps = [
 
 // --- faded desktop background -------------------------------------------------
 // Real photo in /public. Swap this path to change it.
-export const bgPortrait = "/dndwebpage.jpg";
+export const bgPortrait = "/desktop-bg.jpg";
